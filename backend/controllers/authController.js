@@ -3,6 +3,7 @@ const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 const crypto = require("crypto");
 const nodemailer = require("nodemailer");
+const ArtistProfile = require("../models/ArtistProfile");
 const generateToken = (id) => {
   return jwt.sign({ id }, process.env.JWT_SECRET, {
     expiresIn: "7d",
